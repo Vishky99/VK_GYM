@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="GYM.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="VK GYM">
+    <meta name="keywords" content="HTML, CSS, VK, GYM, FITNESS, EXERCISE">
+    <meta name="author" content="Vishal Kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body id="regr_b">
+    <header>
+        <a href="Home.html"><img src="LOGO.png"></a><br>
+        <p>Sign Up</p>
+        <a href="https://cdn5.vectorstock.com/i/1000x1000/60/29/error-404-sorry-page-not-found-image-vector-10856029.jpg" target="_blank">
+            <button>Sign In</button>
+        </a>
+    </header>
+    <br>
+    <div class="main_form">
+        <form>
+            <div class="name_info">
+                <div><label for="name">Name:</label></div>
+                <div class="text1"><input type="text" placeholder="First Name" name="fname" id="fname" onblur="validate_fn()"></div><br>
+                <div><input type="text" placeholder="Last Name" name="lname" id="lname" onblur="validate_ln()"></div>
+            </div><br>
+            <div class="email_info">
+                <div><label for="email">Email ID:</label></div>
+                <div><input type="email" placeholder="random@email.com" name="email" id="email" onblur="validate_em()"></div><br>
+                <div><label for="password">Enter Password:</label></div>
+                <!--<div><input autocomplete="off" type="password" size="20"  pattern=".{6,20}" placeholder="Enter Password" required></div><br>-->
+                <div><input autocomplete="off" type="password" placeholder="Enter Password" id="password" onblur="validate_ps()"></div><br>
+                <div><label for="password">Retype Password:</label></div>
+                <!--<div><input type="password" size="20"  pattern=".{6,20}" placeholder="Renter Password" required></div>-->
+                <div><input type="password" placeholder="Renter Password" id="cpassword" onblur="conf_ps()"></div>
+            </div><br>
+            <div><label for="mobile_number">Enter Mobile No.:</label></div>
+            <!--<div><input type="number" size="10" pattern="[789][0-9]{9}" placeholder="10 digit number" required></div><br>-->
+            <div><input type="number" placeholder="10 digit number" id="tele" onblur="validate_pn()"></div><br>
+            <div><label for="gender">Gender</label></div>
+            <div>
+                <select id="GEN" name="gender">
+                    <option selected value>Choose One</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div><br>
+            <div><label for="age">Age:</label></div>
+            <!--<div><input type="number" max="100" placeholder="Enter your Age" required></div><br>-->
+            <div><input type="number" placeholder="Enter your Age" id="age" onblur="validate_age()"></div><br>
+            <div><label for="city">Choose the branch you want to join:</label></div>
+            <div>
+                <select id="CT" name="city">
+                    <optgroup label="Delhi">
+                        <option value="Vasant Vihar">Vasant Vihar</option>
+                        <option value="Greater Kailash 2">Greater Kailash 2</option>
+                        <option value="Okhla">Okhla</option>
+                        <option value="Dwarka">Dwarka</option>
+                    </optgroup>
+                    <optgroup label="Noida">
+                        <option value="Sector 15">Sector 15</option>
+                        <option value="Sector 22">Sector 22</option>
+                        <option value="Sector 47">Sector 47</option>
+                    </optgroup>
+                    <optgroup label="Gandhinagar">
+                        <option value="Airport Road">Airport Road</option>
+                        <option value="GIDC">GIDC</option>
+                    </optgroup>
+                    <optgroup label="Guwahati">
+                        <option value="A.T. Road">A.T. Road</option>
+                    </optgroup>
+                    <optgroup label="Kolkata">
+                        <option value="Salt Lake City">Salt Lake City</option>
+                        <option value="BBD Bagh">BBD Bagh</option>
+                    </optgroup>
+                    <optgroup label="Bhubaneshwar">
+                        <option value="Ashok Nagar">Ashok Nagar</option>
+                    </optgroup>
+                    <optgroup label="Navi Mumbai">
+                        <option value="Taloja">Taloja</option>
+                        <option value="Nerul">Nerul</option>
+                        <option value="Panvel">Panvel</option>
+                    </optgroup>
+                    <optgroup label="Pune">
+                        <option value="Viman Nagar">Viman Nagar</option>
+                        <option value="Baner">Baner</option>
+                    </optgroup>
+                    <optgroup label="Hyderabad">
+                        <option value="Abids">Abids</option>
+                        <option value="Begumpet">Begumpet</option>
+                    </optgroup>
+                    <optgroup label="Bangalore">
+                        <option value="Indira Nagar">Indira Nagar</option>
+                        <option value="Rajaji Nagar">Rajaji Nagar</option>
+                        <option value="Frazer Town">Frazer Town</option>
+                    </optgroup>
+                    <optgroup label="Chennai">
+                        <option value="Anna Nagar">Anna Nagar</option>
+                        <option value="Adyar">Adyar</option>
+                    </optgroup>
+                    <optgroup label="Trivandrum">
+                        <option value="Poojappura">Poojappura</option>
+                    </optgroup>
+                </select>
+            </div><br>
+            <div>
+                <button type="submit" class="registration"><strong>Register</strong></button>
+            </div>
+        </form>
+    </div>
+    <br><br><br><br><br><br>
+    <script src="GYM.js"></script>
+</body>
+</html>
